@@ -85,6 +85,7 @@ def save_info():
 # Read the information in the student_info.text (completed)
 def read_info():
     if not os.path.exists("student_info.txt"):
+        print("File not found")
         return None
     
     with open("student_info.txt", "r") as file:
@@ -97,6 +98,7 @@ def read_info():
 def search_info():
     info_blocks = read_info()
     if not info_blocks:
+        Print("File not found")
         return
     
     search_id = input("Enter student ID to search: ")
@@ -112,6 +114,7 @@ def search_info():
 def remove_info():
     info_blocks = read_info()
     if not info_blocks:
+        print("File not found")
         return
     
     remove_id = input("Enter student ID to replace: ")
@@ -141,10 +144,10 @@ def remove_info():
 # Menu (completed)
 while True:
     print("\nWelcome to the Student GPA Management System!"
-        "\nPlease choose an option:\n1. Add student information"
-        "\n2. Remove student information"
-        "\n3. Search student information"
-        "\n4. Exit")
+        "\nPlease choose an option:\n1. Add student information."
+        "\n2. Remove student information."
+        "\n3. Search student information."
+        "\n4. Exit.")
 
     choice = input("Enter your choice (1/2/3/4): ")
 
